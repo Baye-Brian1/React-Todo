@@ -1,20 +1,70 @@
+ body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0d0f64, #3d0066);
+  color: white;
+  font-family: Arial, sans-serif;
+}
 h1{
   color: black;
   font-size: 50px;
 }
-.count{
+.header{
   display: flex;
-  flex-direction: column;
+  color: white;
+  font-size: 30px;
   gap: 10px;
-  margin:  auto;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100vw; 
+}
+h4{
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  text-align: start;
+  padding: 5px;
 }
 .btn{
-  display: flex;
-  gap: 10px;
+  z-index: 1000;
+  color: white;
+  background: rgb(241, 109, 61);
+  border-radius: 20px;
+  border: 1px solid rgb(241, 109, 61);
+  padding: 10px;
+  margin-left: -40px;
+  outline: rgb(241, 109, 61);
 }
-button{
-  border: 1px solid black;
+input{
+  margin: 15px;
+  outline: none;
+  padding: 8px;
+  border: 1px solid rgb(128, 128, 128, 0.2);
+  height: 20px;
+  border-radius: 20px;
+  width: 200px;
+  background-color: rgb(128, 128, 128, 0.1);
+}
+.orange{
+  color: rgb(241, 109, 61);
+}
+.task{
+  color: black;
+  display: flex;
+  flex-direction: column;
+  max-width: 310px;
+  background: white;
+  border-radius: 10px;
+  margin:  auto;
+  justify-content: start;
+  min-height: 60vh;
+}
+.taskin{
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: -20px;
 }

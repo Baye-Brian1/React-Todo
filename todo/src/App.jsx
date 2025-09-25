@@ -1,11 +1,13 @@
 import './App.css'
 import React from 'react';
-import Counter from './components/counter'
+import TaskForm from './components/taskForm';
+
 
 function App() {
   return(
     <div>
-      <Counter/>
+      <h1 className='header'><span className='orange'>To-Do</span> APP</h1>
+      <TaskForm/>
     </div>
   );
 }
