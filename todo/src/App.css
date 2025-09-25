@@ -11,3 +11,10 @@ h1{
   justify-content: center;
   width: 100vw;
 }
+.btn{
+  display: flex;
+  gap: 10px;
+}
+button{
+  border: 1px solid black;
+}
