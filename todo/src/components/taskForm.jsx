@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 
-function TodoForm () {
-  const [tasks, setTasks]= useState("");
+function TodoForm ({addTask}) {
+  const [input, setInput]= useState("");
   function handleSubmit(e) {
     e.preventDefault();
+    addTask(input); 
+    setInput("");
   }
   
 return(
@@ -14,10 +16,11 @@ return(
        <input 
         type="text"
         placeholder="Enter task" 
-        value={tasks}
-        onChange={(e)=>setTasks(e.value.target)}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
       />
        <button className="btn">Add Task</button>
+       
       </div>
     </form>
     );
