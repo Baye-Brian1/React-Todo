@@ -9,11 +9,8 @@ function TodoItem({ task, deleteTask, completeTask }) {
       <div className="btns">
          <input className='complete' type="checkbox" onClick={() => completeTask(task.id)}/>
          <span style={task.completed ? { textDecoration: 'line-through' } : {}}>{task.text}</span>
-        {/* {task.completed ? 'Undo' : 'Complete'} */}
       </div>
-        <button className="deletebtn" onClick={() => deleteTask(task.id)}>
-           <FontAwesomeIcon icon={faTrash} size="lg" className='trash' />
-        </button>
+       <FontAwesomeIcon onClick={()=> deleteTask(task.id)} icon={faTrash} size="lg" className='trash' />
     </li>
   );
 }

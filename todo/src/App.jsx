@@ -3,6 +3,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import TodoList from "./components/taskList";
 import TodoForm from "./components/taskForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
   
@@ -33,7 +34,7 @@ const [tasks, setTasks] = useState(() => {
     setTasks((prev) =>
       prev.map((task) =>
         task.id === id ? { ...task, completed: !task.completed } : task
-      )
+      )   
     );
   };
 

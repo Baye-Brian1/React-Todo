@@ -29,24 +29,42 @@ h4{
   text-align: start;
   padding: 5px;
 }
+.input-container button {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background: #1976d2;
+}
 .btn{
-  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  transform: translateY(-50%);
   color: white;
   background: #1d96f2;
   border-radius: 20px;
   border: 1px solid #1d96f2;
   padding: 10px;
-  margin-left: -55px;
-  outline: rgb(241, 109, 61);
 }
 input{
-  margin: 10px 15px;
+  overflow: hidden;
+  width: 100%;
   outline: none;
-  padding: 8px;
+  padding: 20px 89px 20px 15px;
   border: 1px solid rgb(128, 128, 128, 0.2);
   height: 20px;
   border-radius: 20px;
-  width: 275px;
+  box-sizing: border-box;
   background-color: rgb(128, 128, 128, 0.1);
 }
 .task{
@@ -62,7 +80,9 @@ input{
   box-shadow: 0 14px 6px rgba(36, 36, 36, 0.1);
 }
 .taskin{
-  display: flex;
+  padding: 10px 15px;
+  position: relative;
+  width: 325px;
   align-items: center;
   gap: 0;
   margin-top: -20px;
@@ -71,12 +91,13 @@ input{
   display: flex;
   align-items: center;
 }
-.deletebtn{
-  border: transparent;
-  background: transparent;
-}
+
 .trash{
   color: #1d96f2;
+  opacity: 0;
+  transform: translateX(-50px); 
+  pointer-events: none;    
+  transition: all 1.5s ease;
 }
 .complete{
   border-radius: 50%;
@@ -90,7 +111,6 @@ input{
 .list{
   border: transparent;
   border-radius: 8px;
-  border-left: 3px solid  #1d96f2;
   background: rgb(128, 128, 128, 0.1);
   color: black;
   display: flex;
@@ -98,6 +118,12 @@ input{
   margin: 5px auto; 
   justify-content: space-between;
   align-items: center;
+}
+.list:hover .trash {
+  opacity: 1;
+  cursor: pointer;
+  transform: translateX(0);
+  pointer-events: auto; 
 }
 .todolist{
   padding: 10px;
