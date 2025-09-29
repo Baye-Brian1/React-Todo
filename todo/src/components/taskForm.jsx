@@ -10,7 +10,7 @@ function TodoForm ({addTask}) {
   }
   
 return(
-    <form className="task" onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
        <h4>To-Do List</h4>
       <div className="taskin">
        <input 
